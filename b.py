@@ -1,15 +1,13 @@
 import sys
-import murmurhash as mmh
 import mmh3
 import matplotlib.pyplot as plt
+import numpy as np
+import time
+import pandas as pd
 
-
-if __name__ == '__main__':
+def hashIntoBuckets(bucketNo, maxId):
+  startTime = time.time()
   valueShift = 1 << 31 # added to hash value to bring it positive
-  bucketNo = 128 # better to be power of 2
-  maxId = 10 * 1000 * 1000
-  if len(sys.argv) > 1: bucketNo = int(sys.argv[1])
-  if len(sys.argv) > 2: maxId = int(sys.argv[2])
   buckets = [[] for x in range(bucketNo)]
   for i in range(maxId):
     hash = mmh3.hash(str(i)) + valueShift
@@ -17,11 +15,50 @@ if __name__ == '__main__':
     #print('{}:{}:bucket:{}'.format(i, hash, bucket))
     buckets[bucket].append(i)
     #print('{}:{}:bucket:{}, afterwards length {}'.format(i, hash, bucket, len(buckets[bucket])))
-  for bucketIndex in range(bucketNo):
-    print('bucket {} has {} elements'.format(bucketIndex, len(buckets[bucketIndex])))
+  #for bucketIndex in range(bucketNo):
+  #  print('bucket {} has {} elements'.format(bucketIndex, len(buckets[bucketIndex])))
   counts = [len(x) for x in buckets]
+  minV = min(counts)
+  maxV = max(counts)
+  median = np.median(counts)
+  mean = np.mean(counts)
+  diffPercent = (maxV-minV)*100/minV
+  print('bucketNo:{} maxId:{} [min, median, mean, max] = [{}, {}, {}, {}]; difference: {}%'
+    .format(bucketNo, maxId, minV, median, mean, maxV, round(diffPercent, 2)))
+  endTime = time.time()
+  print('whole calculation finished in {} seconds'.format(endTime - startTime))
+  #drawCounts(counts)
+  return minV, maxV, median, mean, diffPercent
+
+def drawCounts(counts):
   plt.plot(counts)
-  plt.title('bucket sizes')
+  plt.title('bucket sizes (total: {})'.format(maxId))
   plt.xlabel('buckets')
   plt.ylabel('counts')
+  plt.ylim(ymin=0)
+  plt.show()
+
+if __name__ == '__main__':
+  df = pd.DataFrame(index=['10M', '50M', '100M'])
+  for bucketNo in [4, 8, 16, 32, 64]:
+    diffPercents = []
+    for maxId in [10*1000*1000, 50*1000*1000, 100*1000*1000]:
+      v = hashIntoBuckets(bucketNo, maxId)
+      diffPercents.append(v[4])
+      print('bucket:{} maxId:{}, results:{}'.format(bucketNo, maxId, v))
+    df[str(bucketNo) + ' buckets'] = diffPercents
+  df.plot()
+  plt.xlabel('number of ids')
+  plt.ylabel('diff percents')
+  plt.ylim(ymin=0)
+  #plt.show()
+  plt.savefig('all.png')
+
+def unused():
+  fig, ax = plt.subplots()
+  plt.plot(diffPercents)
+  #plt.xticks(['1K', '10K', '100K', '1M'])
+  #ax.set_xticklabels(['1K', '10K', '100K', '1M', '10M'])
+  ax.set_xticklabels(['1K', '10K', '100K', '1M'])
+  plt.ylim(ymin=0)
   plt.show()
