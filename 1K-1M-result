@@ -1,0 +1,84 @@
+bucketNo:4 maxId:1000 [min, median, mean, max] = [238, 247.0, 250.0, 268]; difference: 12.61%
+whole calculation finished in 0.0007617473602294922 seconds
+bucket:4 maxId:1000, results:(238, 268, 247.0, 250.0, 12.605042016806722)
+bucketNo:4 maxId:5000 [min, median, mean, max] = [1195, 1252.5, 1250.0, 1300]; difference: 8.79%
+whole calculation finished in 0.003139019012451172 seconds
+bucket:4 maxId:5000, results:(1195, 1300, 1252.5, 1250.0, 8.786610878661088)
+bucketNo:4 maxId:10000 [min, median, mean, max] = [2470, 2489.0, 2500.0, 2552]; difference: 3.32%
+whole calculation finished in 0.0062062740325927734 seconds
+bucket:4 maxId:10000, results:(2470, 2552, 2489.0, 2500.0, 3.3198380566801617)
+bucketNo:4 maxId:50000 [min, median, mean, max] = [12378, 12446.5, 12500.0, 12729]; difference: 2.84%
+whole calculation finished in 0.03138279914855957 seconds
+bucket:4 maxId:50000, results:(12378, 12729, 12446.5, 12500.0, 2.8356761997091615)
+bucketNo:4 maxId:100000 [min, median, mean, max] = [24903, 24973.0, 25000.0, 25151]; difference: 1.0%
+whole calculation finished in 0.06153273582458496 seconds
+bucket:4 maxId:100000, results:(24903, 25151, 24973.0, 25000.0, 0.995863952134281)
+bucketNo:4 maxId:500000 [min, median, mean, max] = [124609, 125054.0, 125000.0, 125283]; difference: 0.54%
+whole calculation finished in 0.3330039978027344 seconds
+bucket:4 maxId:500000, results:(124609, 125283, 125054.0, 125000.0, 0.5408919098941489)
+bucketNo:4 maxId:1000000 [min, median, mean, max] = [249465, 249947.5, 250000.0, 250640]; difference: 0.47%
+whole calculation finished in 0.6432509422302246 seconds
+bucket:4 maxId:1000000, results:(249465, 250640, 249947.5, 250000.0, 0.47100795702804)
+bucketNo:8 maxId:1000 [min, median, mean, max] = [112, 127.5, 125.0, 138]; difference: 23.21%
+whole calculation finished in 0.0008869171142578125 seconds
+bucket:8 maxId:1000, results:(112, 138, 127.5, 125.0, 23.214285714285715)
+bucketNo:8 maxId:5000 [min, median, mean, max] = [597, 626.0, 625.0, 664]; difference: 11.22%
+whole calculation finished in 0.003730297088623047 seconds
+bucket:8 maxId:5000, results:(597, 664, 626.0, 625.0, 11.222780569514239)
+bucketNo:8 maxId:10000 [min, median, mean, max] = [1209, 1250.0, 1250.0, 1308]; difference: 8.19%
+whole calculation finished in 0.0071833133697509766 seconds
+bucket:8 maxId:10000, results:(1209, 1308, 1250.0, 1250.0, 8.188585607940446)
+bucketNo:8 maxId:50000 [min, median, mean, max] = [6105, 6227.0, 6250.0, 6395]; difference: 4.75%
+whole calculation finished in 0.033653974533081055 seconds
+bucket:8 maxId:50000, results:(6105, 6395, 6227.0, 6250.0, 4.75020475020475)
+bucketNo:8 maxId:100000 [min, median, mean, max] = [12271, 12498.0, 12500.0, 12716]; difference: 3.63%
+whole calculation finished in 0.06117105484008789 seconds
+bucket:8 maxId:100000, results:(12271, 12716, 12498.0, 12500.0, 3.6264363132589033)
+bucketNo:8 maxId:500000 [min, median, mean, max] = [61826, 62546.5, 62500.0, 62915]; difference: 1.76%
+whole calculation finished in 0.3240489959716797 seconds
+bucket:8 maxId:500000, results:(61826, 62915, 62546.5, 62500.0, 1.7613948824119303)
+bucketNo:8 maxId:1000000 [min, median, mean, max] = [124501, 124931.0, 125000.0, 125915]; difference: 1.14%
+whole calculation finished in 0.634289026260376 seconds
+bucket:8 maxId:1000000, results:(124501, 125915, 124931.0, 125000.0, 1.135733849527313)
+bucketNo:16 maxId:1000 [min, median, mean, max] = [49, 64.5, 62.5, 72]; difference: 46.94%
+whole calculation finished in 0.0008778572082519531 seconds
+bucket:16 maxId:1000, results:(49, 72, 64.5, 62.5, 46.93877551020408)
+bucketNo:16 maxId:5000 [min, median, mean, max] = [282, 308.5, 312.5, 339]; difference: 20.21%
+whole calculation finished in 0.0037412643432617188 seconds
+bucket:16 maxId:5000, results:(282, 339, 308.5, 312.5, 20.21276595744681)
+bucketNo:16 maxId:10000 [min, median, mean, max] = [572, 630.5, 625.0, 660]; difference: 15.38%
+whole calculation finished in 0.0074350833892822266 seconds
+bucket:16 maxId:10000, results:(572, 660, 630.5, 625.0, 15.384615384615385)
+bucketNo:16 maxId:50000 [min, median, mean, max] = [3009, 3136.5, 3125.0, 3225]; difference: 7.18%
+whole calculation finished in 0.034546852111816406 seconds
+bucket:16 maxId:50000, results:(3009, 3225, 3136.5, 3125.0, 7.178464606181455)
+bucketNo:16 maxId:100000 [min, median, mean, max] = [6031, 6277.0, 6250.0, 6382]; difference: 5.82%
+whole calculation finished in 0.059248924255371094 seconds
+bucket:16 maxId:100000, results:(6031, 6382, 6277.0, 6250.0, 5.81993035980766)
+bucketNo:16 maxId:500000 [min, median, mean, max] = [30843, 31306.0, 31250.0, 31535]; difference: 2.24%
+whole calculation finished in 0.3126099109649658 seconds
+bucket:16 maxId:500000, results:(30843, 31535, 31306.0, 31250.0, 2.243620918847064)
+bucketNo:16 maxId:1000000 [min, median, mean, max] = [62021, 62552.5, 62500.0, 63062]; difference: 1.68%
+whole calculation finished in 0.6184422969818115 seconds
+bucket:16 maxId:1000000, results:(62021, 63062, 62552.5, 62500.0, 1.6784637461504974)
+bucketNo:32 maxId:1000 [min, median, mean, max] = [21, 31.5, 31.25, 43]; difference: 104.76%
+whole calculation finished in 0.0008690357208251953 seconds
+bucket:32 maxId:1000, results:(21, 43, 31.5, 31.25, 104.76190476190476)
+bucketNo:32 maxId:5000 [min, median, mean, max] = [136, 154.0, 156.25, 177]; difference: 30.15%
+whole calculation finished in 0.00379180908203125 seconds
+bucket:32 maxId:5000, results:(136, 177, 154.0, 156.25, 30.147058823529413)
+bucketNo:32 maxId:10000 [min, median, mean, max] = [278, 311.5, 312.5, 348]; difference: 25.18%
+whole calculation finished in 0.007421255111694336 seconds
+bucket:32 maxId:10000, results:(278, 348, 311.5, 312.5, 25.179856115107913)
+bucketNo:32 maxId:50000 [min, median, mean, max] = [1492, 1561.5, 1562.5, 1640]; difference: 9.92%
+whole calculation finished in 0.03708291053771973 seconds
+bucket:32 maxId:50000, results:(1492, 1640, 1561.5, 1562.5, 9.919571045576408)
+bucketNo:32 maxId:100000 [min, median, mean, max] = [3014, 3136.5, 3125.0, 3210]; difference: 6.5%
+whole calculation finished in 0.06278085708618164 seconds
+bucket:32 maxId:100000, results:(3014, 3210, 3136.5, 3125.0, 6.5029860650298605)
+bucketNo:32 maxId:500000 [min, median, mean, max] = [15355, 15617.5, 15625.0, 15823]; difference: 3.05%
+whole calculation finished in 0.3212299346923828 seconds
+bucket:32 maxId:500000, results:(15355, 15823, 15617.5, 15625.0, 3.0478671442526863)
+bucketNo:32 maxId:1000000 [min, median, mean, max] = [30838, 31236.0, 31250.0, 31537]; difference: 2.27%
+whole calculation finished in 0.6504461765289307 seconds
+bucket:32 maxId:1000000, results:(30838, 31537, 31236.0, 31250.0, 2.266683961346391)
