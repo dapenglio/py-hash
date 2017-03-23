@@ -4,10 +4,8 @@ from dateutil import parser
 import mmh3
 
 #bucket_sizes = [5, 10, 15, 20, 25, 30]
-bucket_sizes = [25, 50, 75, 100]
+bucket_sizes = [10, 16, 20]
 durations = list( range(1, 15))
-#bucket_sizes = [5, 10]
-#durations = list( range(1, 3))
 
 def hash(i):
   valueShift = 1 << 31
@@ -35,10 +33,13 @@ x = []
 y = []
 z = []
 df = pd.read_csv('orders.csv', nrows=2000000)
+#startInd = 0
+#startInd = 750000
+startInd = 1500000
 for b in bucket_sizes:
   zs = []
   for d in durations:
-    df1 = df[750000 : 750000 + 25000 * d ] # about 25K orders a day
+    df1 = df[startInd: startInd + 25000 * d ] # about 25K orders a day
     r = stats(df1, b)
     zs.append(r)
   x.append( [b] * len(durations))
@@ -56,8 +57,10 @@ from mpl_toolkits.mplot3d import Axes3D
 
 fig = plt.figure()
 ax=fig.gca(projection='3d')
-ax.plot_surface(x, y, z)
+#ax.plot_surface(x, y, z)
+ax.plot_wireframe(x, y, z)
 plt.show()
+#plt.savefig('diff-' + str(startInd) + '.png')
 
 print('used {} seconds'.format(time.time()-t))
 
